@@ -34,10 +34,106 @@
   }
 }
 
+.work__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.work__img {
+  position: relative;
+}
+
+.project-image {
+  width: 100%; /* Make it responsive */
+  height: auto;
+}
+
+.projects-button {
+  position: absolute;
+  top: 200px; /* Adjust as needed */
+  left: 85%;
+  transform: translateX(-50%);
+  background-color: transparent; /* Make background transparent */
+  color: white; /* Keep text white */
+  padding: 10px 30px; /* Increase padding for more length */
+  border: 2px solid white; /* White border */
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold; /* Make text bold */
+  transition: background-color 0.3s, color 0.3s; /* Optional: smooth transition */
+  display: flex; /* Use flex to align items */
+  align-items: center; /* Center items vertically */
+}
+
+.projects-button .arrow {
+  margin-left: 10px; /* Space between text and arrow */
+}
+
+/* Optional: Add hover effect */
+.projects-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+}
+
+.details-container {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 20px);
+  max-width: 600px; /* Adjust as needed */
+  max-height: 80vh; /* Maximum height */
+  background-color: rgba(6, 6, 6, 0.941); /* Grey background */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.project-title {
+  margin: 0; /* Remove default margin */
+  color: white; /* Set title color to white */
+  text-decoration: underline; /* Add underline */
+}
+
+.project-details ul {
+  list-style-type: disc; /* Use disc for bullet points */
+  color: white; /* Set bullet points to white */
+  padding-left: 20px; /* Indent the bullet points */
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.project-details {
+  margin-top: 10px;
+}
+
+.detail-image {
+  width: 100%; /* Make it responsive */
+  height: auto;
+}
+
+/* Optional: To make the button look good on hover */
+.projects-button:hover {
+  background-color: #0056b3; /* Darker shade */
+}
+
 /*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;
 }
+
 
 html {
   scroll-behavior: smooth;

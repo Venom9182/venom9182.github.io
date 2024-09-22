@@ -215,36 +215,82 @@
 
 
             <!--===== WORK =====-->
-<section class="work section" id="work">
-    <h2 class="section-title">Work</h2>
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
+            
+                <div class="work__container">
+                    <div class="work__img">
+                        <img src="assets/img/work1.jpg" alt="Project Image" class="project-image">
+                        <button class="projects-button" onclick="toggleDetails()">Projects <span class="arrow">→</span></button>
+                    </div>
+            
+                    <div class="details-container" id="detailsContainer" style="display: none;">
+                        <div class="details-header">
+                            <h3 class="project-title">P R O J E C T S</h3>
+                            <span class="close-button" onclick="toggleDetails()">&times;</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>PathFinder Pro</h4>
+                            <p>Python, PyGame, Tkinter</p>
+                            <img src="assets/img/Astar.gif" alt="Project Detail" class="detail-image">
+                            <p style="margin-top: 20px;">Here are some details about the project:</p>
+                            <ul style="margin-top: 10px; padding-left: 20px; color: white;">
+                                <li>Designed and developed an intuitive, real-time visualizer to efficiently determine the shortest path between two points, utilizing advanced pathfinding algorithms like Dijkstra’s, A*, and Best First Search.</li>
+                                <li>Built with Python, leveraging PyGame for dynamic visuals and Tkinter for an interactive user interface.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-details">
+                            <h4>Automatify</h4>
+                            <p>Python, SQL, QtDesigner, MyPhp Admin, PyQt</p>
+                            <img src="assets/img/image trans.png" alt="Project Detail" class="detail-image">
+                            <p style="margin-top: 20px;">Here are some details about the project:</p>
+                            <ul style="margin-top: 10px; padding-left: 20px; color: white;">
+                                <li>Worked with a 4-member team to create an application automating text extraction and translation.</li>
+                                <li>Developed an application supporting over 130+ languages, enabling seamless text extraction and translation
+                                    with the ability to output results in both image and text formats, thereby enhancing accessibility and usability.</li>
+                            </ul>
+                        </div>
 
-    <div class="work__container bd-grid">
-        <div class="work__img">
-            <img src="assets/img/work1.jpg" alt="">
-            <span class="project-name">Project</span>
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work2.jpg" alt="">
-            <span class="project-name">Project</span>
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work3.jpg" alt="">
-            <span class="project-name">Project</span>
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work4.jpg" alt="">
-            <span class="project-name">Project</span>
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work5.jpg" alt="">
-            <span class="project-name">Project</span>
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work6.jpg" alt="">
-            <span class="project-name">Project</span>
-        </div>
-    </div>
-</section>
+                        <div class="project-details">
+                            <h4>DIVA: Desktop Integrated Virtual Assistant</h4>
+                            <p>Python, Pyttsx3, SpeechRecognition, Smtplib</p>
+                            <img src="assets/img/Ai imagee.png" alt="Project Detail" class="detail-image">
+                            <p style="margin-top: 20px;">Here are some details about the project:</p>
+                            <ul style="margin-top: 10px; padding-left: 20px; color: white;">
+                                <li> Collaboratively developed an advanced AI-driven virtual assistant capable of understanding user
+                                    commands and executing a wide range of tasks, significantly enhancing user interaction and automation.</li>
+                                <li>Performs tasks like playing music, searching Wikipedia, streaming YouTube, and sending emails.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-details">
+                            <h4>Secured Messenger Application</h4>
+                            <p>Java, Android Studio, FireBase.</p>
+                            <img src="assets/img/secured messenger app.png" alt="Project Detail" class="detail-image">
+                            <p style="margin-top: 20px;">Here are some details about the project:</p>
+                            <ul style="margin-top: 10px; padding-left: 20px; color: white;">
+                                <li> Ensured secure communication between sender and recipient by implementing advanced encryption
+                                    protocols using the cryptographic algorithm AES, safeguarding data integrity and confidentiality.</li>
+                                <li>Utilized Firebase for efficient data transmission, improving system reliability and performance.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <script>
+                function toggleDetails() {
+                    const detailsContainer = document.getElementById('detailsContainer');
+                    if (detailsContainer.style.display === 'none' || detailsContainer.style.display === '') {
+                        detailsContainer.style.display = 'block';
+                    } else {
+                        detailsContainer.style.display = 'none';
+                    }
+                }
+            </script>            
+            
 
 
             <!--===== CONTACT =====-->
