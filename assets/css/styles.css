@@ -288,7 +288,7 @@ img {
   margin-bottom: var(--mb-5);
 }
 .home__title-color {
-  color: var(--first-color);
+  color: rgb(236, 53, 83);
 }
 .home__social {
   display: flex;
