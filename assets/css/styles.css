@@ -626,3 +626,6 @@ img {
   font-size: 0.9em; /* Slightly smaller font size for designation */
   color: gray; /* Change color if needed */
 }
+.work__item {
+  margin-bottom: 20px; /* Adjust the value for more or less space */
+}
