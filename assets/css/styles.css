@@ -402,6 +402,7 @@ img {
   border-radius: 0.5rem;
 }
 
+
 /* ===== WORK ===== */
 .work__container {
   display: flex; /* Use flexbox for horizontal layout */
@@ -411,9 +412,9 @@ img {
 }
 
 .work__item {
-  display: flex;
-  justify-content: center; /* Center items */
-  width: 800px; /* Fixed width for all cards */
+  flex: 1; /* Allow the items to grow */
+  min-width: 800px; /* Minimum width for all cards */
+  max-width: 800px; /* Maximum width for all cards */
 }
 
 /* Card Styles */
@@ -436,7 +437,7 @@ img {
 }
 
 .work__logo {
-  width: 100%;
+  width: 100%; /* Full width of the card */
   height: auto;
   margin-bottom: 15px;
   border-radius: 10px; /* Rounded logo */
@@ -444,6 +445,7 @@ img {
 
 .work__details {
   text-align: left; /* Align text to the left */
+  flex-grow: 1; /* Allow details to take remaining space */
 }
 
 .work__company {
