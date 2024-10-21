@@ -402,25 +402,28 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== WORK =====*/
+/* ===== WORK ===== */
 .work__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the cards in the container */
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 20px; /* Space between cards */
 }
 
 .work__item {
   display: flex;
   justify-content: center; /* Center items */
+  width: 800px; /* Fixed width for all cards */
 }
 
+/* Card Styles */
 .work__card {
   background-color: #ffffff; /* Card background color */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  height: 350px; /* Fixed height for uniformity */
-  width: 100%; /* Make cards full width */
+  height: 350px; /* Fixed height */
+  width: 100%; /* Full width of the parent item */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Space between elements */
@@ -468,7 +471,8 @@ img {
 
 @media (max-width: 768px) {
   .work__card {
-      height: auto; /* Allow height to adjust on smaller screens */
+    height: auto; /* Allow height to adjust on smaller screens */
+    width: 100%; /* Full width on smaller screens */
   }
 }
 
