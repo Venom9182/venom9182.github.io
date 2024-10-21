@@ -419,7 +419,7 @@ img {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  height: 600px; /* Fixed height for uniformity */
+  height: 350px; /* Fixed height for uniformity */
   width: 100%; /* Make cards full width */
   display: flex;
   flex-direction: column;
