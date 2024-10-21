@@ -401,8 +401,6 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
-
-
 /* ===== WORK ===== */
 .work__container {
   display: flex; /* Use flexbox for horizontal layout */
