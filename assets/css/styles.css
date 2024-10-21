@@ -175,7 +175,7 @@ img {
   margin-bottom: var(--mb-4);
   text-align: center;
 }
-.section-title::after {
+/* .section-title::after {
   position: absolute;
   content: "";
   width: 64px;
@@ -185,7 +185,7 @@ img {
   margin: auto;
   top: 2rem;
   background-color: var(--first-color);
-}
+} */
 
 .section {
   padding-top: 3rem;
@@ -404,19 +404,74 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
-  row-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
-.work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
-  overflow: hidden;
+
+.work__item {
+  display: flex;
+  justify-content: center; /* Center items */
 }
-.work__img img {
-  transition: 1s;
+
+.work__card {
+  background-color: #ffffff; /* Card background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 600px; /* Fixed height for uniformity */
+  width: 100%; /* Make cards full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between elements */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.work__img img:hover {
-  transform: scale(1.1);
+
+.work__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.work__logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Rounded logo */
+}
+
+.work__details {
+  text-align: left; /* Align text to the left */
+}
+
+.work__company {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.work__date {
+  font-size: 1em;
+  color: #666; /* Subtle color for date */
+}
+
+.work__designation {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.work__tech-stack {
+  font-size: 0.9em;
+  color: #333; /* Darker color for tech stack */
+  flex-grow: 1; /* Allow tech stack to take remaining space */
+}
+
+@media (max-width: 768px) {
+  .work__card {
+      height: auto; /* Allow height to adjust on smaller screens */
+  }
+}
+
 
 /* ===== CONTACT =====*/
 .contact__input {
@@ -628,4 +683,114 @@ img {
 }
 .work__item {
   margin-bottom: 20px; /* Adjust the value for more or less space */
+}
+/* Learning Section */
+.learning.section {
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #333;
+}
+
+.section-title-new:after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #4caf50;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+/* Grid Layout for Cards */
+.learning__grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+/* Learning Card */
+.learning__card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.learning__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.learning__icon-container {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+
+.learning__title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.learning__description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.learning__progress {
+  font-size: 0.9rem;
+  color: #4caf50;
+  font-weight: bold;
+  background-color: #e8f5e9;
+  padding: 5px 10px;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Icon Customization */
+.learning__icon {
+  color: #4caf50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .learning__description {
+      font-size: 0.9rem;
+  }
+
+  .learning__progress {
+      font-size: 0.8rem;
+  }
+}
+.learning__bar {
+  width: 80px;
+  height: 4px;
+  background-color: #4caf50;
+  margin: 0 auto; /* Center the bar */
+  border-radius: 5px;
+  margin-bottom: 2rem; /* Space between the bar and grid */
 }
